@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="estilos_formulario.css">
+</head>
+<body>
+    <form action="none" method="post">
+    <h1>Ingresa tus datos</h1>
+        <ul>
+            <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="user_name" required>
+            </li>
+            <li>
+                <label for="last_name">Apellido</label>
+                <input type="text" id="last_name" name="user_last_name" required>
+            </li>
+            <li>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="user_mail" placeholder="user@correo.com" required>
+            </li>
+            <li>
+                <label for="adress">Dirección:</label>
+                <input type="text" id="adress" name="user_adress" >
+            </li>
+            <li>
+                <label for="states">Departamento actual:</label>
+                <select id="states" name="user_state" >
+                    <option value="" disabled selected>-- Seleccione un departamento --</option>
+                    <option value="Amazonas">Amazonas</option>
+                    <option value="Antioquia">Antioquia</option>
+                    <option value="Arauca">Arauca</option>
+                    <option value="Atlántico">Atlántico</option>
+                    <option value="Bolívar">Bolívar</option>
+                    <option value="Boyacá">Boyacá</option>
+                    <option value="Caldas">Caldas</option>
+                    <option value="Caquetá">Caquetá</option>
+                    <option value="Casanare">Casanare</option>
+                    <option value="Cauca">Cauca</option>
+                    <option value="Cesar">Cesar</option>
+                    <option value="Chocó">Chocó</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Cundinamarca">Cundinamarca</option>
+                    <option value="Guainía">Guainía</option>
+                    <option value="Guaviare">Guaviare</option>
+                    <option value="Huila">Huila</option>
+                    <option value="La Guajira">La Guajira</option>
+                    <option value="Magdalena">Magdalena</option>
+                    <option value="Meta">Meta</option>
+                    <option value="Nariño">Nariño</option>
+                    <option value="Norte de Santander">Norte de Santander</option>
+                    <option value="Putumayo">Putumayo</option>
+                    <option value="Quindío">Quindío</option>
+                    <option value="Risaralda">Risaralda</option>
+                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                    <option value="Santander">Santander</option>
+                    <option value="Sucre">Sucre</option>
+                    <option value="Tolima">Tolima</option>
+                    <option value="Valle del Cauca">Valle del Cauca</option>
+                    <option value="Vaupés">Vaupés</option>
+                    <option value="Vichada">Vichada</option>
+                </select>
+            </li>
+            <li>
+                <label for="country">País de orígen:</label>
+                <select id="country" name="user_country"  required>
+                    <option value="" disabled selected>-- Seleccione un país --</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Dominicana">República Dominicana</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="México">México</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+            </li>
+            <li>
+                <label for="phone_number">Teléfono de contacto:</label>
+                <input type="tel" name="user_number" id="phone_number" maxlength="10" pattern="0-9" placeholder="+57 xxxxxxxxx">
+            </li>
+            <li>
+                <label for="msg">Descripción personal:</label>
+                <textarea id="msg" name="user_msg"  maxlength="300" rows="3" cols="20" placeholder="Ingrese una breve descripción"></textarea>
+            </li>
+            <li>
+                <label for="career">¿A qué carrera deseas inscribirte?</label>
+                <select id="career" name="user_career" required>
+                    <option value="" disabled selected>-- Seleccione una carrera --</option>
+                    <option value="JOBS TO BE DONE">JOBS TO BE DONE</option>
+                    <option value="CLOUD NATIVE">CLOUD NATIVE</option>
+                    <option value="FRONTEND">FRONTEND</option>
+                    <option value="BACKEND">BACKEND</option>
+                    <option value="FUNDAMENTALS">FUNDAMENTALS</option>
+                    <option value="PYTHON">PYTHON</option>
+                    <option value="MARKETING DIGITAL">MARKETING DIGITAL</option>
+                    <option value="EXPLORACIÓN DE DATOS">EXPLORACIÓN DE DATOS</option>
+                    <option value="NUMPY">NUMPY</option>
+                    <option value="DESIGN THINKING FOR SOFTWARE DEVELOPERS">DESIGN THINKING FOR SOFTWARE DEVELOPERS</option>
+                    <option value="FLUTTER">FLUTTER</option>
+                    <option value="BUSINESS ANALYST">BUSINESS ANALYST</option>
+                    <option value="DESIGNOPS">DESIGNOPS</option>
+                </select>
+            </li>
+            <li>
+                <label for="mode1">Modalidad:</label>
+                <input type="radio" id="mode1" name="user_mode" value="presencial" required> Presencial
+                <input type="radio" id="mode2" name="user_mode" value="online">Online
+            </li>
+            <li>
+                <label for="work_yes">¿Estás trabajando actualmente?</label>
+                <input type="radio" id="work_yes" name="user_work" value="yes" required> Si
+                <input type="radio" id="work_no" name="user_work" value="no">No
+            </li>
+        </ul>
+        <div class="button">
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </div>
+        
+    </form>
+</body>
+</html>
